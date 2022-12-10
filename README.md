@@ -187,6 +187,7 @@ You can add your environment variables to an `.env` file (like shown in the samp
   create table public.content (
     id uuid not null default uuid_generate_v4(),
     url text,
+    checked boolean default false,
     created_at timestamp default current_timestamp,
     updated_at timestamp default current_timestamp,
     profile_id uuid references public.profiles not null,
