@@ -1,4 +1,4 @@
-import { supabase } from "./user.server";
+import { supabase } from "./supabase.server";
 import type { User } from "./user.server";
 
 export type Note = {

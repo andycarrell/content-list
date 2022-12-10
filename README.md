@@ -183,6 +183,17 @@ You can add your environment variables to an `.env` file (like shown in the samp
     primary key (id)
   );
 
+  -- Create content table
+  create table public.content (
+    id uuid not null default uuid_generate_v4(),
+    url text,
+    created_at timestamp default current_timestamp,
+    updated_at timestamp default current_timestamp,
+    profile_id uuid references public.profiles not null,
+
+    primary key (id)
+  );
+
   -- inserts a row into public.users
   create or replace function public.handle_new_user()
   returns trigger
