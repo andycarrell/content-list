@@ -135,6 +135,7 @@ export default function Read() {
               Save
             </button>
             <button
+              type="button"
               className={cx(
                 "invisible group-focus-within:visible max-sm:hidden",
                 "py-2 px-2 font-semibold text-slate-500 hover:text-slate-900",
